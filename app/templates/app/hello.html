@@ -1,0 +1,17 @@
+{% if is_authenticated %}
+    <h1>Hello {{name |capfirst}}</h1>
+{% endif %}
+<h2>{{first_list.0}}</h2>
+<h2>{{temp_object.x}}</h2>
+<h3>{{age}}</h3>
+
+{% for item in first_list %}
+    <ul>
+        <li>
+            {{item}}
+        </li>
+    </ul>
+{% endfor %}
+
+<h1> Filters</h1>
+{{first_list | length}}
